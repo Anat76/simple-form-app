@@ -1,13 +1,19 @@
-const Form = ({ stat, setStat, type, placeholder }) => {
+const Form = ({ submit }) => {
+  //   console.log({ state });
+  //   console.log({ setState });
+  //   console.log({ type });
+  //   console.log({ placeholder });
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      onChange={(event) => {
-        setStat(event.target.value);
-      }}
-      value={stat}
-    />
+    <form onSubmit={submit}>
+      <input
+        type={type}
+        placeholder={placeholder}
+        onChange={(event) => {
+          setState(event.target.value);
+        }}
+        value={state}
+      />
+    </form>
   );
 };
 
