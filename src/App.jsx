@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Form from "./components/Form";
 
 const App = () => {
   // déclaration de 4 states
@@ -21,14 +22,20 @@ const App = () => {
   return (
     <div>
       <form onSubmit={submit}>
-        <input
+        <Form
+          stat={name}
+          setState={setName}
+          type="text"
+          placeholder="Jean Dupont"
+        />
+        {/* <input
           type="text"
           placeholder="Jean Dupont"
           onChange={(event) => {
             setName(event.target.value);
           }}
           value={name}
-        />
+        /> */}
 
         <input
           type="email"
